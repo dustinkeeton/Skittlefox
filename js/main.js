@@ -36,16 +36,19 @@ $(document).ready(function() {
 
 		if ($(this).hasClass('galleryillu')) {
 			$('.galleryillu').colorbox({
+					opacity: 0.5,
 					rel: 'galleryillu'
 			});
 		}
 		else if ($(this).hasClass('gallerysketch')) {
 			$('.gallerysketch').colorbox({
+					opacity: 0.5,
 					rel: 'gallerysketch'
 			});
 		}
 		else {
 			$('.galleryfan').colorbox({
+					opacity: 0.5,
 					rel: 'galleryfan'
 			});
 		}
