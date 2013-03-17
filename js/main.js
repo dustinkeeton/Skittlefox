@@ -1,25 +1,54 @@
 // AUTHOR: Dustin Keeton
 $(document).ready(function() {
 	
+	// set colorbox.js settings
+	$.colorbox.settings.height= "90%";
+	$.colorbox.settings.maxHeight=850;
+	$.colorbox.settings.maxWidth=1200;
+
 	// Expand/collapse menu depending on button clicked and current state
 	$('li img').click(function() {
-		var slideString = '.menuLeft#'+ $(this).attr('id');
-		$(slideString).siblings().each().css('display', 'none');
-		// $('#menuRight').position({
-		// 	my: "left center",
-		// 	at: "right right",
-		// 	of: $(slideString)
-		// });
-		$(slideString).toggle({
-			effect: 'slide',
-			easing: 'easeOutBounce',
-			duration: 1500
-		});
-		// $('#menuContainer').animate({
-		// 	effect: 'slide',
-		// 	easing: 'easeOutBounce',
-		// 	duration: 1500
-		// });
-		// $(slideString).animate({width: 'toggle'}, {easing: easeOutBounce});
+
+		// target menuLeft pane
+		var slideString = '#menuLeft .'+ $(this).attr('class');
+		
+		// expand/collapse clicked menu
+
+		if (parseInt($('#menuContainer').css('left'),10) == -700) {
+			$(slideString).siblings().addClass('invisible');
+			$(slideString).removeClass('invisible');
+			$('#menuContainer').animate({left: -100}, {duration: 1000, easing: 'easeOutBack'});
+		}
+		else {
+			$('#menuContainer').animate({left: -700}, {duration: 1000, easing: 'easeOutBack', complete: function(){
+				var alreadyExpanded = !$(slideString).hasClass('invisible');
+				$(slideString).siblings().addClass('invisible');
+				$(slideString).removeClass('invisible');
+				if (!alreadyExpanded){
+					$('#menuContainer').animate({left: -100}, {duration: 1000, easing: 'easeOutBack'});
+				}
+			}});
+		}
+	});
+
+	$('table a').click(function() {
+		
+
+		if ($(this).hasClass('galleryillu')) {
+			$('.galleryillu').colorbox({
+					rel: 'galleryillu'
+			});
+		}
+		else if ($(this).hasClass('gallerysketch')) {
+			$('.gallerysketch').colorbox({
+					rel: 'gallerysketch'
+			});
+		}
+		else {
+			$('.galleryfan').colorbox({
+					rel: 'galleryfan'
+			});
+		}
+
 	});
 });

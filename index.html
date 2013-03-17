@@ -14,8 +14,13 @@
 
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
-        <link href="css/smoothness/jquery-ui-1.10.1.custom.css" rel="stylesheet"> <!-- jquery ui theme  -->
+        <link href="css/no-theme/jquery-ui-1.10.1.custom.css" rel="stylesheet"> <!-- jquery ui theme  -->
+       	<link rel="stylesheet" href="css/colorbox.css" /> <!-- colorbox theme -->
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+
+        
+  
+        
 
 
 	</head>
@@ -27,39 +32,104 @@
 
         <!-- Author: Dustin Keeton -->
 		<div id="menuContainer">
-			<div class="menuLeft" id="illu">
-				illustrations
-			</div>
-			<div class="menuLeft" id="sketch">
-				sketch
-			</div>
-			<div class="menuLeft" id="fan">
-				fan
-			</div>
-			<div class="menuLeft" id="about">
-				<span id="links">
-					<a id="wordpress" target="blank" href="http://skittlefox.wordpress.com/">
-						<img src="img/wordpressicon.png"/>
-					</a>
-					<a id="deviantart" target="blank" href="http://skittlefox.deviantart.com/">
-						<img src="img/deviantarticon.png"/>
-					</a>
-					<a id="twitter" target="blank" href="https://twitter.com/skittlefox/">
-						<img src="img/twittericon.png"/>
-					</a>
-					<a id="cghub" target="blank" href="http://skittlefox.cghub.com">
-						<img src ="img/cghubicon.png"/>
-					</a>
-				</span>
+			<div id="offscreen"></div>
+			<div id="menuLeft">
+				<div class="illu">
+					<table class="thumb">
+						<tr>
+							<td>
+								<a class="galleryillu" href="img/illu/amelia.jpg" />
+									<img src="img/illu/ameliathumb.png" />
+								</a>
+							</td>
+							<td>
+								<a class="galleryillu" href="img/illu/saucers.jpg" />
+									<img src="img/illu/saucersthumb.png" />
+								</a>
+							</td>
+						</tr>
+					</table>
+				</div>
+				<div class="sketch">
+					<table>
+						<tr>
+							<td>
+								sketch
+							</td>
+						</tr>
+						<tr>
+							<td>
+							</td>
+						</tr>
+						<tr>
+							<td>
+							</td>
+						</tr>
+					</table>
+				</div>
+				<div class="fan">
+					<table>
+						<tr>
+							<td>
+								<a class="galleryfan" href="img/fan/arishok.jpg" />
+									<img src="img/fan/arishokthumb.png" />
+								</a>
+							</td>
+							<td>
+								<a class="galleryfan" href="img/fan/hawke.jpg" />
+									<img src="img/fan/hawkethumb.png" />
+								</a>
+							</td>
+							<td>
+								<a class="galleryfan" href="img/fan/highelf.jpg" />
+									<img src="img/fan/highelfthumb.png" />
+								</a>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<a class="galleryfan" href="img/fan/isabel.jpg" />
+									<img src="img/fan/isabelthumb.png" />
+								</a>
+							</td>
+							<td>
+								<a class="galleryfan" href="img/fan/qunarifem.jpg" />
+									<img src="img/fan/qunarifemthumb.png" />
+								</a>
+							</td>
+						</tr>
+						<tr>
+							<td>
+							</td>
+						</tr>
+					</table>
+				</div>
+				<div class="about">
+					<img id="selfportrait" src="img/selfportrait.jpg"/>
+					<span id="links">
+						<a id="wordpress" target="blank" href="http://skittlefox.wordpress.com/">
+							<img src="img/wordpressicon.png"/>
+						</a>
+						<a id="deviantart" target="blank" href="http://skittlefox.deviantart.com/">
+							<img src="img/deviantarticon.png"/>
+						</a>
+						<a id="twitter" target="blank" href="https://twitter.com/skittlefox/">
+							<img src="img/twittericon.png"/>
+						</a>
+						<a id="cghub" target="blank" href="http://skittlefox.cghub.com">
+							<img src ="img/cghubicon.png"/>
+						</a>
+					</span>
+				</div>
 			</div>
 			<div id="menuRight">
 				<span id="selectables">
 					<nav>
 						<ul id ="index">
-							<li><img id="illu" src="img/designbutton.png"/></li>
-							<li><img id="sketch" src="img/sketchbutton.png"/></li>
-							<li><img id="fan" src="img/fanbutton.png"/></li>
-							<li><img id="about" src="img/infobutton.png"/></li>
+							<li><img class="illu" src="img/designbutton.png"/></li>
+							<li><img class="sketch" src="img/sketchbutton.png"/></li>
+							<li><img class="fan" src="img/fanbutton.png"/></li>
+							<li><img class="about" src="img/infobutton.png"/></li>
 						</ul>
 					</nav>
 				</span>
@@ -71,14 +141,17 @@
 			</div>
 		</div>
 
+		<!-- <div id="floaty">SITE IN BETA. Email dustin.keeton49@gmail.com to report a bug.</div> -->
+
 		<!-- End Author: Dustin Keeton -->
 
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
-		<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/jquery-ui.min.js"></script>
+		<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.0.min.js"><\/script>')</script>
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
-        <script>window.jQuery.ui || document.write('<script src="js/libs/jquery-ui-1.10.1.custom.min.js"><\/script>')</script>
+        <script src="js/libs/jquery.colorbox-min.js"></script>
+        <script>window.jQuery.ui || document.write('<script src="js/libs/jquery-ui-1.10.2.custom.min.js"><\/script>')</script>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
