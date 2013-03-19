@@ -2,9 +2,9 @@
 $(document).ready(function() {
 	
 	// set colorbox.js settings
-	$.colorbox.settings.height= "100%";
-	$.colorbox.settings.maxHeight=850;
-	$.colorbox.settings.maxWidth=1200;
+	// $.colorbox.settings.height= "100%";
+	// $.colorbox.settings.maxHeight=850;
+	// $.colorbox.settings.maxWidth=1200;
 
 	// Expand/collapse menu depending on button clicked and current state
 	$('li img').click(function() {

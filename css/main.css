@@ -94,7 +94,7 @@ textarea {
    ========================================================================== */
 
 body {
-    background-color: #D8213F;
+    background-color: #EF002A;
 }
 
 img {
@@ -107,7 +107,7 @@ table {
 }
 
 #menuContainer {
-    background-color: #DFDDA0;
+    background-color: #FFD373;
     border-top-right-radius: 250px;
     border-bottom-right-radius: 250px;
     margin-top: 100px;
@@ -221,6 +221,10 @@ td, tr, table img {
     padding: 0px;
     margin: 0px;
     border: none;
+}
+
+table a:focus, table a:active {
+    outline:0;
 }
 
 /* ==========================================================================
