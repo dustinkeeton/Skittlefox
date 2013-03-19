@@ -111,18 +111,19 @@ img {
     width: 1000px;
     position: relative;
     left: -700px;
+    -moz-box-shadow: 15px 2px 15px rgba(0,0,0,0.5);
+    -webkit-box-shadow: 15px 2px 15px rgba(0,0,0,0.5);
+    box-shadow: 15px 2px 15px rgba(0,0,0,0.5);
 }
 
 #offscreen {
     width: 100px;
     height: 100%;
-    /*background-color: #E3B342;*/
     position: relative;
     float:left;
 }
 
 #menuLeft {
-    /*background-color: #E3B342;*/
     width: 600px;
     height: 100%;
     position: relative;
@@ -150,7 +151,6 @@ img {
 
 
 #menuRight {
-    /*background-color: #E3B342;*/
     width: 300px;
     height: 100%;
     position: relative;
