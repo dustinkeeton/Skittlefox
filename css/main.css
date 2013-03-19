@@ -94,8 +94,7 @@ textarea {
    ========================================================================== */
 
 body {
-    /*background-color: #8B7483;*/
-    background-color: #F2354B;
+    background-color: #CD3158;
 }
 
 img {
@@ -108,7 +107,7 @@ table {
 }
 
 #menuContainer {
-    background-color: #E3B342;
+    background-color: #DFDDA0;
     border-top-right-radius: 250px;
     border-bottom-right-radius: 250px;
     margin-top: 100px;
