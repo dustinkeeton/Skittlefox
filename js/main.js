@@ -17,15 +17,18 @@ $(document).ready(function() {
 		if (parseInt($('#menuContainer').css('left'),10) == -700) {
 			$(slideString).siblings().addClass('invisible');
 			$(slideString).removeClass('invisible');
-			$('#menuContainer').transition({left: -100, duration: 1000, easing: 'easeOutBack'});
+			$('#menuContainer').animate({left: -100}, {duration: 1000, easing: 'easeOutBack'});
+			// $('#menuContainer').transition({left: -100, duration: 1000, easing: 'easeOutBack'});
 		}
 		else {
-			$('#menuContainer').transition({left: -700, duration: 1000, easing: 'easeOutBack', complete: function(){	
+			// $('#menuContainer').transition({left: -700, duration: 1000, easing: 'easeOutBack', complete: function(){	
+			$('#menuContainer').animate({left: -700}, {duration: 1000, easing: 'easeOutBack', complete: function(){
 				var alreadyExpanded = !$(slideString).hasClass('invisible');
 				$(slideString).siblings().addClass('invisible');
 				$(slideString).removeClass('invisible');
 				if (!alreadyExpanded){
-					$('#menuContainer').transition({left: -100, duration: 1000, easing: 'easeOutBack'});
+					// $('#menuContainer').transition({left: -100, duration: 1000, easing: 'easeOutBack'});
+					$('#menuContainer').animate({left: -100}, {duration: 1000, easing: 'easeOutBack'});
 				}
 			}});
 		}
