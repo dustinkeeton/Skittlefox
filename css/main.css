@@ -101,11 +101,6 @@ img {
     max-width: 100%;
 }
 
-table {
-    margin: 50px;
-    border-collapse: collapse;
-}
-
 #menuContainer {
     background-color: #FFD373;
     border-top-right-radius: 250px;
@@ -134,11 +129,25 @@ table {
     float: left;
 }
 
-#menuLeft > div {
+#menuLeft div {
     position: absolute;
     max-width: 100%;
     height: 100%;
 }
+
+.thumbs {
+    padding: 50px;
+}
+
+.thumbs img{
+    width: 100px;
+    padding: 15px;
+}
+
+.thumbs a:hover, .thumbs a:active {
+    outline:0px;
+}
+
 
 #menuRight {
     /*background-color: #E3B342;*/
@@ -201,28 +210,12 @@ table {
     margin-left: 25px;
 }
 
-#floaty {
-    position:absolute;
-    bottom:0px;
-    right:0px;
-}
-
 #copyright {
     font-size: 10px;
     overflow:hidden;
     clear: both;
 }
 
-td, tr, table img {
-    width: 100px;
-    padding: 0px;
-    margin: 0px;
-    border: none;
-}
-
-table a:focus, table a:active {
-    outline:0;
-}
 
 /* ==========================================================================
    Helper classes

@@ -31,24 +31,24 @@ $(document).ready(function() {
 		}
 	});
 
-	$('table a').click(function() {
+	$('.thumbs a').click(function() {
 		
 
 		if ($(this).hasClass('galleryillu')) {
 			$('.galleryillu').colorbox({
-					opacity: 0.5,
+					opacity: 0.75,
 					rel: 'galleryillu'
 			});
 		}
 		else if ($(this).hasClass('gallerysketch')) {
 			$('.gallerysketch').colorbox({
-					opacity: 0.5,
+					opacity: 0.75,
 					rel: 'gallerysketch'
 			});
 		}
 		else {
 			$('.galleryfan').colorbox({
-					opacity: 0.5,
+					opacity: 0.75,
 					rel: 'galleryfan'
 			});
 		}
