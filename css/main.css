@@ -102,12 +102,9 @@ img {
     max-width: 100%;
 }
 
-button {
-    border-radius: 50%;
-}
-
 table {
     margin: 50px;
+    border-collapse: collapse;
 }
 
 #menuContainer {
@@ -213,8 +210,19 @@ table {
     right:0px;
 }
 
-table img {
-    width: 150px;
+#copyright {
+    position: fixed;
+    right: 0px;
+    bottom: 0px;
+    font-size: 10px;
+    overflow:hidden;
+}
+
+td, tr, table img {
+    width: 100px;
+    padding: 0px;
+    margin: 0px;
+    border: none;
 }
 
 /* ==========================================================================

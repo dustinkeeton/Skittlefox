@@ -2,7 +2,7 @@
 $(document).ready(function() {
 	
 	// set colorbox.js settings
-	$.colorbox.settings.height= "90%";
+	$.colorbox.settings.height= "100%";
 	$.colorbox.settings.maxHeight=850;
 	$.colorbox.settings.maxWidth=1200;
 
