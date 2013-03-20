@@ -101,6 +101,10 @@ img {
     max-width: 100%;
 }
 
+a {
+    text-decoration: none;
+}
+
 #menuContainer {
     background-color: #FFD373;
     border-top-right-radius: 250px;
@@ -163,7 +167,7 @@ img {
 #links {
     position: absolute;
     bottom: 15px;
-    left: 250px;
+    left: 230px;
     width: 350px;
 }
 
