@@ -143,6 +143,8 @@ img {
 .thumbs img{
     width: 75px;
     margin: 15px;
+    border-radius: 50%;
+    border: solid white 3px;
 }
 
 .thumbs a, .thumbs a:hover, .thumbs a:active, .thumbs a:visited {
