@@ -233,7 +233,8 @@ a {
     width: 50%;
     margin: 35px 0px 0px 25px;
     text-align: justify;
-    font-size: 14px;
+    font-size: 15px;
+    font-family: NeverLetGo, Helvetica, Arial, sans-serif;
 }
 
 #copyright {
@@ -244,6 +245,11 @@ a {
     clear: both;
 }
 
+@font-face {
+    font-family: NeverLetGo;
+    src: url(never_let_go/NeverLetGo.ttf);
+    font-weight:400;
+}
 
 /* ==========================================================================
    Helper classes
