@@ -162,8 +162,8 @@ img {
 
 #links {
     position: absolute;
-    bottom: 50px;
-    left: 150px;
+    bottom: 15px;
+    left: 250px;
     width: 350px;
 }
 
@@ -217,9 +217,19 @@ img {
 
 #selfportrait {
     width: 200px;
-    height: 200px;
     margin-top: 50px;
     margin-left: 25px;
+    position: relative;
+    float: left;
+}
+
+#bio {
+    position: relative;
+    float: left;
+    width: 50%;
+    margin: 35px 0px 0px 25px;
+    text-align: justify;
+    font-size: 14px;
 }
 
 #copyright {
