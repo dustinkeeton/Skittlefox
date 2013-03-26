@@ -39,19 +39,19 @@ $(document).ready(function() {
 
 		if ($(this).hasClass('galleryillu')) {
 			$('.galleryillu').colorbox({
-					opacity: 1,
+					opacity: 0.8,
 					rel: 'galleryillu'
 			});
 		}
 		else if ($(this).hasClass('gallerysketch')) {
 			$('.gallerysketch').colorbox({
-					opacity: 1,
+					opacity: 0.8,
 					rel: 'gallerysketch'
 			});
 		}
 		else {
 			$('.galleryfan').colorbox({
-					opacity: 1,
+					opacity: 0.8,
 					rel: 'galleryfan'
 			});
 		}
