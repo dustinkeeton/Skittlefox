@@ -1,0 +1,19 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    <Dustin Keeton> -- <Developer/Designer> -- <@dustinkeeton>
+    <Kimberly Parker> -- <Designer> -- <@skittlefox>
+
+
+# THANKS
+
+    <name>
+
+# TECHNOLOGY COLOPHON
+
+    HTML5, CSS3
+    Normalize.css, jQuery, Modernizr
+    Colorbox
+    jQuery UI

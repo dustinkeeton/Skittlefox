@@ -94,7 +94,9 @@ textarea {
    ========================================================================== */
 
 body {
-    background-color: #EF002A;
+    /*background: <color> <image> <position> <attachment> <repeat>*/
+    background-image: url(../img/bg.png);
+    background-size: 50%;
 }
 
 img {
@@ -157,20 +159,23 @@ a {
 #about {
     position: relative;
     clear: both;
-    margin-left: 50px;
+    margin-right: 50px;
+    text-align: right;
+    font-size: 12px;
+    font-family: 'Wellfleet', Helvetica, Arial, sans-serif;
 }
 
 #links {
     clear: both;
     position: relative;
     width: 350px;
-    margin-top: 15px;
+    margin-left: 50px;
 }
 
 #links a {
     position: relative;
     float: left;
-    padding: 0px 15px 0px 0px;
+    padding: 15px 15px 0px 0px;
 }
 
 #links img {
@@ -180,9 +185,16 @@ a {
 #copyright {
     position: absolute;
     left: 200px;
-    bottom: -30px;
+    bottom: -200px;
     font-size: 12px;
+    font-family: 'Wellfleet', Helvetica, Arial, sans-serif;
     clear: both;
+}
+
+@font-face {
+    font-family: Fluoxetine;
+    src: url(fluoxetine/Fluox___.ttf);
+    font-weight: 400;
 }
 
 /* ==========================================================================
