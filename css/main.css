@@ -106,18 +106,13 @@ a {
 }
 
 #menuContainer {
-    background-color: #FFD373;
-    border-top-right-radius: 250px;
-    border-bottom-right-radius: 250px;
     margin-top: 100px;
     margin-bottom: 100px;
     height: 500px;
     width: 1000px;
     position: relative;
     left: -700px;
-    -moz-box-shadow: 7px 2px 7px rgba(0,0,0,0.5);
-    -webkit-box-shadow: 7px 2px 7px rgba(0,0,0,0.5);
-    box-shadow: 7px 2px 7px rgba(0,0,0,0.5);
+    overflow: visible;
 }
 
 #offscreen {
@@ -132,26 +127,17 @@ a {
     height: 100%;
     position: relative;
     float: left;
+    overflow: visible;
 }
 
-#menuLeft div {
-    position: absolute;
-    max-width: 100%;
-    height: 100%;
-}
-
-.thumbs {
-    margin: 50px;
-}
-
-.thumbs img{
+#menuLeft img{
     width: 75px;
     margin: 15px;
     border-radius: 50%;
     border: solid white 3px;
 }
 
-.thumbs a, .thumbs a:hover, .thumbs a:active, .thumbs a:visited {
+#menuLeft a, #menuLeft a:hover, #menuLeft a:active, #menuLeft a:visited {
     outline:none;
 }
 
@@ -161,94 +147,42 @@ a {
     height: 100%;
     position: relative;
     float:left;
-    /*border-right-style: solid;*/
+    overflow: visible;
+}
+
+#logo {
+    position: relative;
+}
+
+#about {
+    position: relative;
+    clear: both;
+    margin-left: 50px;
 }
 
 #links {
-    position: absolute;
-    bottom: 15px;
-    left: 230px;
+    clear: both;
+    position: relative;
     width: 350px;
+    margin-top: 15px;
 }
 
 #links a {
     position: relative;
     float: left;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding: 0px 15px 0px 0px;
 }
 
 #links img {
-    /*height: 40px;*/
     width: 40px;
-}
-
-#index {
-    position: absolute;
-    list-style: none;
-    left: -20px;
-    top: 30px;
-}
-
-#index li {
-    position: relative;
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
-
-#index img {
-    /*height: 75px;*/
-    width: 75px;
-    border-radius: 50%;
-    -moz-box-shadow: 3px 1px 3px rgba(0,0,0,0.5);
-    -webkit-box-shadow: 3px 1px 3px rgba(0,0,0,0.5);
-    box-shadow: 3px 1px 3px rgba(0,0,0,0.5);
-}
-
-#index img:visited, #index img:active{
-    -moz-box-shadow: none;
-    -webkit-box-shadow: none;
-    box-shadow: none;
-}
-
-
-#title {
-    width: 150px;
-    position: absolute;
-    left: 150px;
-    bottom: 75px;
-}
-
-#selfportrait {
-    width: 200px;
-    margin-top: 50px;
-    margin-left: 25px;
-    position: relative;
-    float: left;
-}
-
-#bio {
-    position: relative;
-    float: left;
-    width: 50%;
-    margin: 35px 0px 0px 25px;
-    text-align: justify;
-    font-size: 15px;
-    font-family: NeverLetGo, Helvetica, Arial, sans-serif;
 }
 
 #copyright {
     position: absolute;
-    left: 225px;
+    left: 200px;
     bottom: -30px;
     font-size: 12px;
     clear: both;
-}
-
-@font-face {
-    font-family: NeverLetGo;
-    src: url(never_let_go/NeverLetGo.ttf);
-    font-weight:400;
 }
 
 /* ==========================================================================
