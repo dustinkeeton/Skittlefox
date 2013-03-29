@@ -3,24 +3,23 @@ $(document).ready(function() {
 	
 	var extended = false;
 	var $links = $('#links');
+
 	// set colorbox.js settings
-	// $.colorbox.settings.height= "100%";
-	// $.colorbox.settings.maxHeight=850;
-	// $.colorbox.settings.maxWidth=1200;
+	$.colorbox.settings.height= "100%";
+	$.colorbox.settings.maxHeight=850;
+	$.colorbox.settings.maxWidth=1200;
 
 	// Expand/collapse menu 
 	$('#logo').click(function() {
 		
 		// expand/collapse clicked menu
-
+		animateLinks();
 		if (parseInt($('#menuContainer').css('left'),10) == -700) {
 			$('#menuContainer').animate({left: -100}, {duration: 1000, easing: 'easeOutBack'});
 			$('#about').animate({left: 0}, {duration: 1000, easing: 'easeOutBack'});
 			$('#copyright').animate({left: 200}, {duration: 1000, easing: 'easeOutBack'});
-			animateLinks();
 		}
 		else {
-			animateLinks();
 			$('#menuContainer').animate({left: -700}, {duration: 1000, easing: 'easeInBack'});
 			$('#about').animate({left: -999}, {duration: 1000, easing: 'easeInBack'});
 			$('#copyright').animate({left: -999}, {duration: 1000, easing: 'easeInBack'});
@@ -36,6 +35,7 @@ $(document).ready(function() {
 		});
 	});
 
+	// animate links from behind 
 	function animateLinks(){
 		if (!extended) {
 			$links.removeClass('invisible');

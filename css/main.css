@@ -105,6 +105,13 @@ img {
 
 a {
     text-decoration: none;
+    color: inherit
+}
+
+a:hover {
+    text-decoration:none; 
+    cursor:pointer;  
+    font-weight: bold;
 }
 
 #menuContainer {
@@ -167,7 +174,7 @@ a {
     margin-right: 50px;
     text-align: right;
     font-size: 12px;
-    font-family: 'Wellfleet', Helvetica, Arial, sans-serif;
+    font-family: 'Special Elite', Helvetica, Arial, sans-serif;
     z-index: -1;
     left: -999px;
 }
@@ -209,16 +216,17 @@ a {
     position: absolute;
     bottom:0px;
     font-size: 12px;
-    font-family: 'Wellfleet', Helvetica, Arial, sans-serif;
+    font-family: 'Special Elite', Helvetica, Arial, sans-serif;
     clear: both;
     left: -999px;
+    color: #f01e0f
 }
 
-@font-face {
+/*@font-face {
     font-family: Fluoxetine;
     src: url(fluoxetine/Fluox___.ttf);
     font-weight: 400;
-}
+}*/
 
 /* ==========================================================================
    Helper classes
