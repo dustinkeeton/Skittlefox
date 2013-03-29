@@ -156,6 +156,11 @@ a {
     position: relative;
 }
 
+#logo:hover {
+    cursor: hand;
+    cursor: pointer;
+}
+
 #about {
     position: relative;
     clear: both;
@@ -163,20 +168,38 @@ a {
     text-align: right;
     font-size: 12px;
     font-family: 'Wellfleet', Helvetica, Arial, sans-serif;
+    z-index: -1;
+    left: -999px;
 }
 
 #links {
     clear: both;
-    position: relative;
+    position: absolute;
     width: 350px;
-    margin-left: 50px;
+    left: 172px;
+    top: 68px;
+    z-index: -1;
 }
 
 #links a {
-    position: relative;
-    float: left;
-    padding: 15px 15px 0px 0px;
+    position: inherit;
 }
+
+/*#wordpress {
+    top: 10px;
+}
+#deviantart {
+    left: 80px;
+    top: 60px;
+}
+#twitter {
+    left: 100px;
+    top: 100px;
+}
+#cghub {
+    left: 45px;
+    top: 30px;
+}*/
 
 #links img {
     width: 40px;
@@ -184,11 +207,11 @@ a {
 
 #copyright {
     position: absolute;
-    left: 200px;
-    bottom: -200px;
+    bottom:0px;
     font-size: 12px;
     font-family: 'Wellfleet', Helvetica, Arial, sans-serif;
     clear: both;
+    left: -999px;
 }
 
 @font-face {
