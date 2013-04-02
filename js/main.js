@@ -4,8 +4,7 @@ $(document).ready(function() {
 	var $links = $('#links');
 	$links.addClass('invisible');
 
-	// set colorbox.js settings
-	// $.colorbox.settings.height= "100%";
+	// set colorbox.js settings and resize 
 	$.colorbox.settings.maxHeight="99%";
 	$.colorbox.settings.maxWidth="100%";
 	$(document).on('cbox_complete', function(){
@@ -41,12 +40,14 @@ $(document).ready(function() {
 			$('#copyright').animate({left: 200}, {duration: 1000, easing: 'easeOutBack'});
 			//links
 			$links.removeClass('invisible');
-			$('#wordpress').animate({top: -50}, {duration: 500});
-			$('#deviantart').animate({left: 80, top: 10}, {duration: 500});
-			$('#twitter').animate({left: 100, top: 50}, {duration: 500});
-			$('#cghub').animate({left: 45, top: -20}, {duration: 500, complete: function(){
+			$('#wordpress').animate({top: -55, left: -15}, {duration: 500});
+			$('#cghub').animate({top: -40, left: 26}, {duration: 500, complete: function(){
 				$links.css('z-index', '+1');
-			}});	
+			}});
+			$('#tumblr').animate({top: -15, left: 65}, {duration: 500});
+			$('#deviantart').animate({top: 20, left: 95}, {duration: 500});
+			$('#twitter').animate({top: 64, left: 105}, {duration: 500});
+				
 		}
 		else {
 			//Menu pieces
@@ -55,12 +56,13 @@ $(document).ready(function() {
 			$('#copyright').animate({left: -999}, {duration: 1000, easing: 'easeInBack'});
 			//links
 			$links.css('z-index', '-1');
-			$('#wordpress').animate({top: 0}, {duration: 500});
-			$('#deviantart').animate({left: 0, top: 0}, {duration: 500});
-			$('#twitter').animate({left: 0, top: 0}, {duration: 500});
+			$('#wordpress').animate({top: 0, top: 0}, {duration: 500});
 			$('#cghub').animate({left: 0, top: 0}, {duration: 500, complete: function(){
 				$links.addClass('invisible');
 			}});	
+			$('#tumblr').animate({left: 0, top: 0}, {duration: 500});
+			$('#deviantart').animate({left: 0, top: 0}, {duration: 500});
+			$('#twitter').animate({left: 0, top: 0}, {duration: 500});
 		}
 	} 
 
