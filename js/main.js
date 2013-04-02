@@ -5,9 +5,18 @@ $(document).ready(function() {
 	$links.addClass('invisible');
 
 	// set colorbox.js settings
-	$.colorbox.settings.height= "100%";
-	$.colorbox.settings.maxHeight=850;
-	$.colorbox.settings.maxWidth=1200;
+	// $.colorbox.settings.height= "100%";
+	$.colorbox.settings.maxHeight="99%";
+	$.colorbox.settings.maxWidth="100%";
+	$(document).on('cbox_complete', function(){
+		var fontSize = 16;
+		var titleMax = $('#colorbox').width() * .80;
+  		$("#cboxTitle").css("font-size", "16px"); 
+  		while($('#cboxTitle').width() > titleMax){
+  			fontSize-=1;
+    		$("#cboxTitle").css("font-size", fontSize);
+  		}
+	});
 
 	// Expand/collapse menu 
 	$('#logo').click(function() {	
