@@ -96,7 +96,9 @@ textarea {
 body {
     /*background: <color> <image> <position> <attachment> <repeat>*/
     background-image: url(../img/bg2.png);
-    background-size: 25%;
+    background-size: 500px;
+    width: 960px;
+    /*margin: 0 auto;*/
 }
 
 img {
@@ -117,23 +119,17 @@ a:hover {
 span {
     font-weight: 600;
     font-size: 12px;
+    -webkit-font-smoothing: antialiased;
 }
 
 #menuContainer {
     margin-top: 100px;
     margin-bottom: 100px;
     height: 500px;
-    width: 1000px;
+    width: 100%;
     position: relative;
-    left: -700px;
+    left: -600px;
     overflow: visible;
-}
-
-#offscreen {
-    width: 100px;
-    height: 100%;
-    position: relative;
-    float:left;
 }
 
 #menuLeft {
@@ -165,6 +161,7 @@ span {
 
 #logo {
     position: relative;
+    top: -30px;
 }
 
 #logo:hover {
@@ -181,6 +178,7 @@ span {
     font-family: 'Special Elite', Helvetica, Arial, sans-serif;
     z-index: -1;
     left: -999px;
+    bottom: 30px;
 }
 
 #links {
@@ -188,7 +186,7 @@ span {
     position: absolute;
     width: 350px;
     left: 172px;
-    top: 68px;
+    top: 38px;
 }
 
 #links a {
@@ -196,13 +194,13 @@ span {
 }
 
 #copyright {
-    position: absolute;
-    bottom:0%;
+    position: fixed;
+    bottom:0px;
     font-size: 12px;
     font-family: 'Special Elite', Helvetica, Arial, sans-serif;
-    clear: both;
-    left: 50%;
-    color: #f01e0f
+    right: 0px;
+    color: #5DCEC6;
+    z-index: -999;
 }
 
 /* ==========================================================================

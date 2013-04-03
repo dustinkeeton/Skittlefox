@@ -33,11 +33,10 @@ $(document).ready(function() {
 
 	// animate stuff
 	function animateStuff(){
-		if (parseInt($('#menuContainer').css('left'),10) == -700) {
+		if (parseInt($('#menuContainer').css('left'),10) == -600) {
 			//Menu pieces
-			$('#menuContainer').animate({left: -100}, {duration: 1000, easing: 'easeOutBack'});
+			$('#menuContainer').animate({left: 0}, {duration: 1000, easing: 'easeOutBack'});
 			$('#about').animate({left: 0}, {duration: 1000, easing: 'easeOutBack'});
-			$('#copyright').animate({left: 200}, {duration: 1000, easing: 'easeOutBack'});
 			//links
 			$links.removeClass('invisible');
 			$('#wordpress').animate({top: -55, left: -15}, {duration: 500});
@@ -51,9 +50,8 @@ $(document).ready(function() {
 		}
 		else {
 			//Menu pieces
-			$('#menuContainer').animate({left: -700}, {duration: 1000, easing: 'easeInBack'});
+			$('#menuContainer').animate({left: -600}, {duration: 1000, easing: 'easeInBack'});
 			$('#about').animate({left: -999}, {duration: 1000, easing: 'easeInBack'});
-			$('#copyright').animate({left: -999}, {duration: 1000, easing: 'easeInBack'});
 			//links
 			$links.css('z-index', '-1');
 			$('#wordpress').animate({top: 0, top: 0}, {duration: 500});
