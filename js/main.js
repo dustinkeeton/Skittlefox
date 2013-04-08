@@ -26,7 +26,7 @@ $(document).ready(function() {
 
 	//orientation change
 	$(window).bind('orientationchange', function(){
-		alert($windowWidth);
+		// alert($windowWidth);
 		switch (window.orientation) {
 			//portrait
 			case 0:
@@ -36,17 +36,17 @@ $(document).ready(function() {
 			//landscape left
 			case 90:
 				$windowWidth = 480;
-				alert('left');
+				// alert('left');
 			break;
 			//landscape right
 			case -90:
 				$windowWidth = 480;
-				alert('right');
+				// alert('right');
 			break;
 		}
 		$(window).scrollTop(0);
 		$(window).scrollLeft(0);
-		animateStuff();
+		expand();
 	});
 
 
@@ -107,7 +107,7 @@ $(document).ready(function() {
 			$('#tumblr').animate({top: 2, left: 82}, {duration: 500});
 			$('#deviantart').animate({top: 42, left: 100}, {duration: 500});
 			$('#twitter').animate({top: 85, left: 110}, {duration: 500});
-		}	
+		}
 	}
 
 	function collapse() {
@@ -117,7 +117,7 @@ $(document).ready(function() {
 
 		}
 		else if ($windowWidth >= 1500) {
-			$left = '-80%';
+			$left = '-90%';
 		}
 		else if ($windowWidth >= 1000) {
 			$left = '-65%';

@@ -374,7 +374,7 @@ span {
 /*iPad*/
 @media only screen and (min-width: 1500px) {
     #menuContainer{
-        left: -80%;
+        left: -90%;
     }
 }
 
