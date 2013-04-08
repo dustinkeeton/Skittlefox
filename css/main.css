@@ -96,7 +96,9 @@ textarea {
 
 body {
     /*background: <color> <image> <position> <attachment> <repeat>*/
+    background-color: #5DCEC6;
     background-image: url(../img/bg2.png);
+    background-repeat: repeat;
 }
 
 img {
@@ -149,7 +151,7 @@ span {
 
 
 #menuRight {
-    /*background-color: blue;*/
+    /*background-color: green;*/
     float:left;
     max-width: 31.25%;
     overflow: visible;
@@ -157,6 +159,7 @@ span {
 }
 
 #logo {
+    /*background-color: purple;*/
     bottom: 30px;
     position: relative;
 }
@@ -167,37 +170,29 @@ span {
 }
 
 #about {
+    /*background-color: red;*/
     bottom: 30px;
-    clear: both;
+    float: left;
     font-size: 11px;
     left: -999px;
-    margin-right: 25%;
     overflow: visible;
     position: relative;
     text-align: right;
-    z-index: -1;
+    width: 75%;
+    /*z-index: -1;*/
 }
 
 #links {
-    clear: both;
     left: 57%;
     position: absolute;
-    top: 6%;
     width: 350px;
 }
 
 #links a {
-    position: absolute;
+    position: inherit;
 }
 
-#copyright {
-    bottom:0%;
-    color: #5DCEC6;
-    font-size: 0.75em;
-    position: fixed;
-    right: 0%;
-    z-index: -999;
-}
+
 
 /* ==========================================================================
    Helper classes
@@ -306,9 +301,8 @@ span {
    Modify as content requires.
    ========================================================================== */
 
-/*Mobile displays*/
-@media only screen and (min-width: 480px) {
-    /* Style adjustments for viewports that meet the condition */
+/*Phone displays*/
+@media only screen and (min-width: 320px) {
     body {
         margin: 0 auto;
         max-width: 960px;
@@ -316,18 +310,60 @@ span {
         -ms-text-size-adjust: none;
         -webkit-text-size-adjust: auto;
     }
+
+    #links {
+        top: 0%;
+    }   
+
+    #copyright {
+    /*background-color: blue;*/
+    bottom:80px;
+    color: #5DCEC6;
+    left: -35px;
+    position: absolute;
+    text-align: left;
+    /*z-index: -2;*/
+    }
+
+    #copyright p {
+        /*background-color: black;*/ 
+        writing-mode:tb-rl;
+        -webkit-transform:rotate(90deg);
+        -moz-transform:rotate(90deg);
+        -o-transform: rotate(90deg);
+        position: absolute;
+        width: 25em;
+    }
 }
 
 
 /*@media only screen and (min-width: 35em) {}*/
 
 /*Large screen displays*/
-@media only screen and (min-width: 1000px) {
+/*Laptop*/
+@media only screen and (min-width: 900px) {
     #menuContainer{
-        left: -70%;
+        left: -65%;
+    }
+
+    #links {
+        top: 6%;
+    }
+
+    #copyright {
+        bottom:70px;
+        left: 100px;
     }
 } 
 
+/*iPad*/
+@media only screen and (min-width: 1500px) {
+    #menuContainer{
+        left: -80%;
+    }
+}
+
+/*Widescreen*/
 @media only screen and (min-width: 1900px) {
     #menuContainer{
         left: -110%;
