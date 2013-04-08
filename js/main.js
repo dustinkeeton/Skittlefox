@@ -1,6 +1,7 @@
 // AUTHOR: Dustin Keeton
 $(document).ready(function() {
-	
+	var $windowWidth = $(window).width();
+	var $left = '-58.59375%';
 	var $links = $('#links');
 	$links.addClass('invisible');
 
@@ -33,9 +34,9 @@ $(document).ready(function() {
 
 	// animate stuff
 	function animateStuff(){
-		if (parseInt($('#menuContainer').css('left'),10) == -600) {
+		if (parseInt($('#menuContainer').css('left')) < 0) {
 			//Menu pieces
-			$('#menuContainer').animate({left: 0}, {duration: 1000, easing: 'easeOutBack'});
+			$('#menuContainer').animate({left: '0%'}, {duration: 1000, easing: 'easeOutBack'});
 			$('#about').animate({left: 0}, {duration: 1000, easing: 'easeOutBack'});
 			//links
 			$links.removeClass('invisible');
@@ -49,8 +50,15 @@ $(document).ready(function() {
 				
 		}
 		else {
+			//Animates back to starting position based on screen size 
+			if($windowWidth >= 1900) {
+				$left = '-110%';
+			}
+			else if ($windowWidth >= 1000) {
+				$left = '-70%';
+			}
 			//Menu pieces
-			$('#menuContainer').animate({left: -600}, {duration: 1000, easing: 'easeInBack'});
+			$('#menuContainer').animate({left: $left}, {duration: 1000, easing: 'easeInBack'});
 			$('#about').animate({left: -999}, {duration: 1000, easing: 'easeInBack'});
 			//links
 			$links.css('z-index', '-1');
