@@ -3,10 +3,11 @@ $(document).ready(function() {
 	var $windowWidth = $(window).width();
 	// alert($windowWidth);
 	var $left = '-58.59375%';
-	var $links = $('#links');
+	var $linkBlock = $('#links');
+	var $links = $('#links a');
 	
 	//hide the links
-	$links.addClass('invisible');
+	$linkBlock.addClass('invisible');
 
 	// set colorbox.js settings and resize 
 	$.colorbox.settings.maxHeight="99%";
@@ -82,14 +83,14 @@ $(document).ready(function() {
 			$('#menuContainer').animate({left: '0%'}, {duration: 1000, easing: 'easeOutBack'});
 			$('#info').animate({left: 0}, {duration: 1000, easing: 'easeOutBack'});
 			//links
-			$links.removeClass('invisible');
-			$links.animate({top: 0, left: +90}, {duration: 500, complete: function(){
-				$links.css('z-index', '+1');
-				$('#wordpress').animate({top: 0, left: 0}, {duration: 500});
-				$('#cghub').animate({top: +40, left: 0}, {duration: 500});
-				$('#tumblr').animate({top: +80, left: 0}, {duration: 500});
-				$('#deviantart').animate({top: +120, left: 0}, {duration: 500});
-				$('#twitter').animate({top: +160, left: 0}, {duration: 500});
+			$linkBlock.removeClass('invisible');
+			$links.animate({left: 55}, {duration: 500, complete: function(){
+				$linkBlock.css('z-index', '+1');
+				$('#wordpress').animate({top: 0}, {duration: 500});
+				$('#cghub').animate({top: 40}, {duration: 500});
+				$('#tumblr').animate({top: 80}, {duration: 500});
+				$('#deviantart').animate({top: 120}, {duration: 500});
+				$('#twitter').animate({top: 160}, {duration: 500});
 			}});
 		}
 		//not iphone - cool animation proceeds!
@@ -98,14 +99,14 @@ $(document).ready(function() {
 			$('#menuContainer').animate({left: '0%'}, {duration: 1000, easing: 'easeOutBack'});
 			$('#info').animate({left: 0}, {duration: 1000, easing: 'easeOutBack'});
 			//links
-			$links.removeClass('invisible');
-			$('#wordpress').animate({top: -55, left: -15}, {duration: 500});
-			$('#cghub').animate({top: -40, left: 26}, {duration: 500, complete: function(){
-				$links.css('z-index', '+1');
+			$linkBlock.removeClass('invisible');
+			$('#wordpress').animate({top: -50, left: 0}, {duration: 500});
+			$('#cghub').animate({top: -30, left: 45}, {duration: 500, complete: function(){
+				$linkBlock.css('z-index', '+1');
 			}});
-			$('#tumblr').animate({top: -15, left: 65}, {duration: 500});
-			$('#deviantart').animate({top: 20, left: 95}, {duration: 500});
-			$('#twitter').animate({top: 64, left: 105}, {duration: 500});
+			$('#tumblr').animate({top: 2, left: 82}, {duration: 500});
+			$('#deviantart').animate({top: 42, left: 100}, {duration: 500});
+			$('#twitter').animate({top: 85, left: 110}, {duration: 500});
 		}	
 	}
 
@@ -124,18 +125,15 @@ $(document).ready(function() {
 		else {
 			$left = '-58.59375%';
 		}
+		//links
+		$linkBlock.css('z-index', '-1');
+		$links.animate({left: 0, top:0}, {duration: 500, complete: function(){
+				$linkBlock.addClass('invisible');
+		}});
 		//Menu pieces
 		$('#menuContainer').animate({left: $left}, {duration: 1000, easing: 'easeInBack'});
 		$('#info').animate({left: -999}, {duration: 1000, easing: 'easeInBack'});
-		//links
-		$links.css('z-index', '-1');
-		$('#wordpress').animate({left: 0, top: 0}, {duration: 500});
-		$('#cghub').animate({left: 0, top: 0}, {duration: 500, complete: function(){
-			$links.addClass('invisible');
-		}});	
-		$('#tumblr').animate({left: 0, top: 0}, {duration: 500});
-		$('#deviantart').animate({left: 0, top: 0}, {duration: 500});
-		$('#twitter').animate({left: 0, top: 0}, {duration: 500});
+
 	}
 
 });
