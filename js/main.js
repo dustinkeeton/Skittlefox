@@ -1,30 +1,40 @@
 // AUTHOR: Dustin Keeton
 $(document).ready(function() {
+	
+	//GLOBAL VARIABLES
 	var $windowWidth = $(window).width();
-	// alert($windowWidth);
 	var $left = '-58.59375%';
 	var $linkBlock = $('#links');
 	var $links = $('#links a');
 	
-	//hide the links
-	$linkBlock.addClass('invisible');
+	
+	//for designing responsive layout
+	// alert($windowWidth);
+
+	//Set stickies
+	// if ($windowWidth < 500) {
+	// 	$linkBlock.sticky({topSpacing: 0, className:"sticky", wrapperClassName:"wrapper"});
+	// 	$('#info').sticky({topSpacing: 0, className:"sticky", wrapperClassName:"wrapper"});
+	// }
 
 	// set colorbox.js settings and resize 
 	$.colorbox.settings.maxHeight="99%";
 	$.colorbox.settings.maxWidth="100%";
 
-	// font resizing
+	// colorbox gallery font resizing
+	//MIGHT WANT TO THINK ABOUT BETTER WAY TO DISPLAY TITLES
 	$(document).on('cbox_complete', function(){
-		var fontSize = 16;
-		var titleMax = $('#colorbox').width() * .80;
-  		$("#cboxTitle").css("font-size", "16px"); 
+		var fontSize = 1;
+		var titleMax = $('#colorbox').width() * 0.80;
+  		$("#cboxTitle").css("font-size", "1em"); 			
   		while($('#cboxTitle').width() > titleMax){
-  			fontSize-=1;
-    		$("#cboxTitle").css("font-size", fontSize);
+  			fontSize-=0.01;
+    		$("#cboxTitle").css("font-size", fontSize+"em");
   		}
 	});
 
 	//orientation change
+	//IS .BIND() DEPRECIATED?
 	$(window).bind('orientationchange', function(){
 		// alert($windowWidth);
 		switch (window.orientation) {
@@ -46,13 +56,14 @@ $(document).ready(function() {
 		}
 		$(window).scrollTop(0);
 		$(window).scrollLeft(0);
+		// $('#wrapper div').removeClass('sticky');
 		expand();
 	});
 
 
-	// Expand/collapse menu 
+	// Click Listener
 	$('#logo').click(function() {	
-		// expand/collapse clicked menu
+		//Expand/Collapse menu
 		animateStuff();
 	});
 
@@ -64,8 +75,23 @@ $(document).ready(function() {
 		});
 	});
 
-	// animate stuff
+	//Scroll Listener
+	// $(window).scroll(function (){
+	// 	if($('#wordpress').offset().top < 0){
+	// 		$linkBlock.addClass('sticky');
+	// 	}
+	// 	else{
+	// 		$linkBlock.removeClass('sticky');
+	// 	}
+	// 	if ($('#info').offset.top() < 0){
+	// 		$('#info').addClass('sticky');
+	// 	}
+	// 	else {
+	// 		$('#info').removeClass('sticky');
+	// 	}
+	// });
 
+	// Core function
 	function animateStuff(){
 		//checking to see if menu is already expanded
 		if (parseInt($('#menuContainer').css('left')) < 0) {
@@ -77,7 +103,7 @@ $(document).ready(function() {
 	} 
 
 	function expand(){
-		//menu is not expaned - next check for iphone screen
+		//Check for phone screen
 		if($windowWidth < 500){
 			//Menu pieces
 			$('#menuContainer').animate({left: '0%'}, {duration: 1000, easing: 'easeOutBack'});
@@ -93,7 +119,7 @@ $(document).ready(function() {
 				$('#twitter').animate({top: 160}, {duration: 500});
 			}});
 		}
-		//not iphone - cool animation proceeds!
+		//Not phone - links splay out.
 		else {
 			//Menu pieces
 			$('#menuContainer').animate({left: '0%'}, {duration: 1000, easing: 'easeOutBack'});
@@ -125,6 +151,7 @@ $(document).ready(function() {
 		else {
 			$left = '-58.59375%';
 		}
+		
 		//links
 		$linkBlock.css('z-index', '-1');
 		$links.animate({left: 0, top:0}, {duration: 500, complete: function(){
@@ -133,7 +160,6 @@ $(document).ready(function() {
 		//Menu pieces
 		$('#menuContainer').animate({left: $left}, {duration: 1000, easing: 'easeInBack'});
 		$('#info').animate({left: -999}, {duration: 1000, easing: 'easeInBack'});
-
 	}
 
 });
