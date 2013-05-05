@@ -24,12 +24,12 @@ $(document).ready(function() {
 	// colorbox gallery font resizing
 	//MIGHT WANT TO THINK ABOUT BETTER WAY TO DISPLAY TITLES
 	$(document).on('cbox_complete', function(){
-		var fontSize = 1;
+		var fontSize = 16;
 		var titleMax = $('#colorbox').width() * 0.80;
-  		$("#cboxTitle").css("font-size", "1em"); 			
+  		$("#cboxTitle").css("font-size", "16px"); 			
   		while($('#cboxTitle').width() > titleMax){
-  			fontSize-=0.01;
-    		$("#cboxTitle").css("font-size", fontSize+"em");
+  			fontSize-=1;
+    		$("#cboxTitle").css("font-size", fontSize);
   		}
 	});
 
@@ -143,7 +143,10 @@ $(document).ready(function() {
 
 		}
 		else if ($windowWidth >= 1500) {
-			$left = '-90%';
+			$left = '-85%';
+		}
+		else if ($windowWidth >= 1400) {
+			$left = '-80%';
 		}
 		else if ($windowWidth >= 1000) {
 			$left = '-65%';
