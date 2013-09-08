@@ -33,21 +33,30 @@
         <![endif]-->
 
         <!-- Author: Dustin Keeton -->
+		<?php 
+			$files = scandir("/img/illu");
+			for($i=0; $i<count($files); $i++){
+				echo $files[$i];
+			}
+		?>
 		<div id="menuContainer">
 			<div id="menuLeft">
-				<a class="gallery" href="img/illu/satyrfinished.jpg" title="Concept armour"/><img src="img/illu/satyrthumb.png" /></a>
-				<a class="gallery" href="img/illu/femaleganon.jpg" title="Female Ganondorf for a gender-busting art collaboration"/><img src="img/illu/femaleganonthumb.png" /></a>
-				<a class="gallery" href="img/illu/starbucks.jpg" title="Chalk mural commission for Starbucks cafe wall"/><img src="img/illu/chalkthumb.png" /></a>
-				<a class="gallery" href="img/illu/piratefinished.jpg" title="Dark side of New Orleans CGHub Contest entry"/><img src="img/illu/piratethumb.png" /></a>
-				<a class="gallery" href="img/illu/brad.jpg" title="Kingston prize portait contest entry"/><img src="img/illu/bradthumb.png" /></a>
-				<a class="gallery" href="img/illu/golemdone.jpg" title="Rock golem concept"/><img src="img/illu/golemthumbresize.png" /></a>
-				<a class="gallery" href="img/illu/woodelf.jpg" title="Wood Elf (Bosmer) concept" /><img src="img/illu/woodelfthumbresize.png" /></a>
-				<a class="gallery" href="img/fan/highelf.jpg" title="High Elf (Atmer) armour concept. Skyrim"/><img src="img/fan/highelfthumbresize.png" /></a>
-				<a class="gallery" href="img/illu/saucers.jpg" title="Entry for Neil Gaiman illustration contest" /><img src="img/illu/saucersthumbresize.png" /></a>
-				<a class="gallery" href="img/illu/amelia.jpg" title="Book cover illustration"/><img src="img/illu/ameliathumbresize.png" /></a>
-				<a class="gallery" href="img/illu/smaug.jpg" title="Smaug concept"/><img src="img/illu/smaugthumbresize.png" /></a>
-				<a class="gallery" href="img/sketch/feet.jpg" title="Foot study"/><img src="img/sketch/feetthumbresize.png" /></a>
-				<a class="gallery" href="img/sketch/hands.jpg" title="Hand study"/><img src="img/sketch/handsthumbresize.png" /></a>
+				<a class="gallery" href="img/illu/golemdone.jpg" title="Rock golem concept."/><img src="img/illu/golemthumbresize.png" /></a>
+				<a class="gallery" href="img/illu/saucers.jpg" title="Entry for Neil Gaiman illustration contest." /><img src="img/illu/saucersthumbresize.png" /></a>
+				<a class="gallery" href="img/illu/amelia.jpg" title="Book cover illustration."/><img src="img/illu/ameliathumbresize.png" /></a>
+				<a class="gallery" href="img/illu/smaug.jpg" title="Smaug concept."/><img src="img/illu/smaugthumbresize.png" /></a>
+				<a class="gallery" href="img/illu/woodelf.jpg" title="Wood Elf (Bosmer) concept." /><img src="img/illu/woodelfthumbresize.png" /></a>
+				<a class="gallery" href="img/fan/arishok.jpg" title="Arishok design breakdown. Dragon Age II."/><img src="img/fan/arishokthumbresize.png" /></a>
+				<a class="gallery" href="img/fan/hawke.jpg" title="Hawke hybrid design breakdown. Dragon Age II."/><img src="img/fan/hawkethumbresize.png" /></a>
+				<a class="gallery" href="img/fan/highelf.jpg" title="High Elf (Atmer) armour concept. Skyrim."/><img src="img/fan/highelfthumbresize.png" /></a>
+				<a class="gallery" href="img/fan/isabel.jpg" title="Isabel alternative armour concept. Dragon Age II."/><img src="img/fan/isabelthumbresize.png" /></a>
+				<a class="gallery" href="img/fan/qunarifem.jpg" title="Concept design for female Qunari warrior. Dragon Age II."/><img src="img/fan/qunarifemthumbresize.png" /></a>
+				<a class="gallery" href="img/sketch/seamonster.jpg" title="Deep sea monster concept."/><img src="img/sketch/seamonsterthumbresize.png" /></a>
+				<a class="gallery" href="img/sketch/feet.jpg" title="Foot study."/><img src="img/sketch/feetthumbresize.png" /></a>
+				<a class="gallery" href="img/sketch/femalemodel.jpg" title="Female life drawing study."/><img src="img/sketch/femalemodelthumbresize.png" /></a>
+				<a class="gallery" href="img/sketch/hands.jpg" title="Hand study."/><img src="img/sketch/handsthumbresize.png" /></a>
+				<a class="gallery" href="img/sketch/malemodel.jpg" title="Male life drawing study."/><img src="img/sketch/malemodelthumbresize.png" /></a>
+				<a class="gallery" href="img/sketch/teapot.jpg" title="Value study."/><img src="img/sketch/teapotthumbresize.png" /></a>
 				<div id="copyright">
 					All original artwork &copy; Copyright Kimberly Parker 2013. All Rights Reserved.
 				</div>
@@ -84,6 +93,7 @@
 							<span class="bold">CONTACT</span><br>
 							thatkimparker (at) gmail (dot) com<br><br>
 							<span class="bold">LINKS</span><br>
+							<a rel="nofollow" target="blank" href="http://dragonage.bioware.com#ea_links">BioWare Interview</a>	
 						</div>
 						<!-- where copyright was before -->
 					</div>

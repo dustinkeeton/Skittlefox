@@ -60,12 +60,13 @@ $(document).ready(function() {
 		expand();
 	});
 
+	expand();
 
 	// Click Listener
-	$('#logo').click(function() {	
+	/*$('#logo').click(function() {	
 		//Expand/Collapse menu
 		animateStuff();
-	});
+	});*/
 
 	// gallery lightbox
 	$('.gallery').click(function() {
@@ -106,33 +107,36 @@ $(document).ready(function() {
 		//Check for phone screen
 		if($windowWidth < 500){
 			//Menu pieces
-			$('#menuContainer').animate({left: '0%'}, {duration: 1000, easing: 'easeOutBack'});
-			$('#info').animate({left: 0}, {duration: 1000, easing: 'easeOutBack'});
+			$('#menuContainer').css('left', '0%');
+			$('#info').css('left', '0');
 			//links
 			$linkBlock.removeClass('invisible');
-			$links.animate({left: 55}, {duration: 500, complete: function(){
-				$linkBlock.css('z-index', '+1');
-				$('#wordpress').animate({top: 0}, {duration: 500});
-				$('#cghub').animate({top: 40}, {duration: 500});
-				$('#tumblr').animate({top: 80}, {duration: 500});
-				$('#deviantart').animate({top: 120}, {duration: 500});
-				$('#twitter').animate({top: 160}, {duration: 500});
-			}});
+			$links.css('left', '55');
+			$linkBlock.css('z-index', '1');
+			$('#wordpress').css('top', '0');
+			$('#cghub').css('top', '40px');
+			$('#tumblr').css('top', '80px');
+			$('#deviantart').css('top', '120px');
+			$('#twitter').css('top', '160px');
 		}
 		//Not phone - links splay out.
 		else {
 			//Menu pieces
-			$('#menuContainer').animate({left: '0%'}, {duration: 1000, easing: 'easeOutBack'});
-			$('#info').animate({left: 0}, {duration: 1000, easing: 'easeOutBack'});
+			$('#menuContainer').css('left', '0%');
+			$('#info').css('left', '0');
 			//links
 			$linkBlock.removeClass('invisible');
-			$('#wordpress').animate({top: -50, left: 0}, {duration: 500});
-			$('#cghub').animate({top: -30, left: 45}, {duration: 500, complete: function(){
-				$linkBlock.css('z-index', '+1');
-			}});
-			$('#tumblr').animate({top: 2, left: 82}, {duration: 500});
-			$('#deviantart').animate({top: 42, left: 100}, {duration: 500});
-			$('#twitter').animate({top: 85, left: 110}, {duration: 500});
+			$('#wordpress').css('top', '-50px'); 
+			$('#wordpress').css('left', '0');
+			$('#cghub').css('top', '-30px'); 
+			$('#cghub').css('left', '45px');
+			$linkBlock.css('z-index', '1');
+			$('#tumblr').css('top', '2px');
+			$('#tumblr').css('left', '82px');
+			$('#deviantart').css('top', '42px');
+			$('#deviantart').css('left', '100px');
+			$('#twitter').css('top', '85px');
+			$('#twitter').css('left', '110px');
 		}
 	}
 

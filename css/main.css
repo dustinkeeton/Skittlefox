@@ -96,9 +96,9 @@ textarea {
 
 body {
     /*background: <color> <image> <position> <attachment> <repeat>*/
-    background-color: #5DCEC6;
-    background-image: url(../img/bg2.png);
-    background-repeat: repeat;
+    background-color: #D3D3D3;
+    /*background-image: url(../img/bg2.png);
+    background-repeat: repeat;*/
 }
 
 img {
