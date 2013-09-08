@@ -328,7 +328,7 @@ span {
         position: absolute;
         z-index: -1;
         top: 15px;
-        left: 30px;
+        left: 84px;
     }  
 
     #links a {
@@ -378,7 +378,7 @@ span {
 
     #links {
         top: 22px;
-        left: 75px;
+        left: 135px;
     }
 
     #about {
